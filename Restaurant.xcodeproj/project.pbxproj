@@ -14,6 +14,14 @@
 		B2A469E420A0511900CB65E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A469E220A0511900CB65E4 /* LaunchScreen.storyboard */; };
 		B2A469EF20A0511A00CB65E4 /* RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A469EE20A0511A00CB65E4 /* RestaurantTests.swift */; };
 		B2A469FA20A0511A00CB65E4 /* RestaurantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A469F920A0511A00CB65E4 /* RestaurantUITests.swift */; };
+		B2A46A0820A05B8400CB65E4 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A46A0720A05B8400CB65E4 /* CategoryTableViewController.swift */; };
+		B2A46A0A20A05B9800CB65E4 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A46A0920A05B9800CB65E4 /* MenuTableViewController.swift */; };
+		B2A46A0C20A05BA900CB65E4 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A46A0B20A05BA900CB65E4 /* OrderTableViewController.swift */; };
+		B2A46A0E20A0670B00CB65E4 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A46A0D20A0670B00CB65E4 /* MenuItemDetailViewController.swift */; };
+		B2A46A1020A067F300CB65E4 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A46A0F20A067F300CB65E4 /* MenuItem.swift */; };
+		B2A46A1220A0696B00CB65E4 /* IntermediaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A46A1120A0696B00CB65E4 /* IntermediaryModels.swift */; };
+		B2A46A1420A06B8300CB65E4 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A46A1320A06B8300CB65E4 /* MenuController.swift */; };
+		B2D9185020A2FC45006E8782 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D9184F20A2FC45006E8782 /* OrderConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,14 @@
 		B2A469F520A0511A00CB65E4 /* RestaurantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A469F920A0511A00CB65E4 /* RestaurantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantUITests.swift; sourceTree = "<group>"; };
 		B2A469FB20A0511A00CB65E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2A46A0720A05B8400CB65E4 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		B2A46A0920A05B9800CB65E4 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		B2A46A0B20A05BA900CB65E4 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		B2A46A0D20A0670B00CB65E4 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
+		B2A46A0F20A067F300CB65E4 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		B2A46A1120A0696B00CB65E4 /* IntermediaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediaryModels.swift; sourceTree = "<group>"; };
+		B2A46A1320A06B8300CB65E4 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		B2D9184F20A2FC45006E8782 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +116,14 @@
 				B2A469D920A0511600CB65E4 /* AppDelegate.swift */,
 				B2A469DB20A0511600CB65E4 /* ViewController.swift */,
 				B2A469DD20A0511600CB65E4 /* Main.storyboard */,
+				B2D9184F20A2FC45006E8782 /* OrderConfirmationViewController.swift */,
+				B2A46A0F20A067F300CB65E4 /* MenuItem.swift */,
+				B2A46A1320A06B8300CB65E4 /* MenuController.swift */,
+				B2A46A1120A0696B00CB65E4 /* IntermediaryModels.swift */,
+				B2A46A0D20A0670B00CB65E4 /* MenuItemDetailViewController.swift */,
+				B2A46A0720A05B8400CB65E4 /* CategoryTableViewController.swift */,
+				B2A46A0920A05B9800CB65E4 /* MenuTableViewController.swift */,
+				B2A46A0B20A05BA900CB65E4 /* OrderTableViewController.swift */,
 				B2A469E020A0511900CB65E4 /* Assets.xcassets */,
 				B2A469E220A0511900CB65E4 /* LaunchScreen.storyboard */,
 				B2A469E520A0511900CB65E4 /* Info.plist */,
@@ -256,8 +280,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2D9185020A2FC45006E8782 /* OrderConfirmationViewController.swift in Sources */,
+				B2A46A1020A067F300CB65E4 /* MenuItem.swift in Sources */,
+				B2A46A1420A06B8300CB65E4 /* MenuController.swift in Sources */,
+				B2A46A0E20A0670B00CB65E4 /* MenuItemDetailViewController.swift in Sources */,
+				B2A46A0A20A05B9800CB65E4 /* MenuTableViewController.swift in Sources */,
+				B2A46A0C20A05BA900CB65E4 /* OrderTableViewController.swift in Sources */,
+				B2A46A1220A0696B00CB65E4 /* IntermediaryModels.swift in Sources */,
 				B2A469DC20A0511600CB65E4 /* ViewController.swift in Sources */,
 				B2A469DA20A0511600CB65E4 /* AppDelegate.swift in Sources */,
+				B2A46A0820A05B8400CB65E4 /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
