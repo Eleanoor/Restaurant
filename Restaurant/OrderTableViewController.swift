@@ -10,6 +10,7 @@
 
 import UIKit
 
+// Protocol.
 protocol AddToOrderDelegate {
     func added(menuItem: MenuItem)
 }
@@ -22,24 +23,24 @@ class OrderTableViewController: UITableViewController, AddToOrderDelegate {
 
     // MARK: - Functions
     
-    /// Function
+    /// Function that updates the screen.
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = editButtonItem
     }
 
-    /// Function
+    /// Function for memory.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    /// Function
+    /// Function updates the table view.
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
     }
     
-    /// Function
+    /// Function updates the table view.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderCellIdentifier", for: indexPath)
         configure(cell: cell, forItemAt: indexPath)
@@ -60,14 +61,24 @@ class OrderTableViewController: UITableViewController, AddToOrderDelegate {
         }
     }
 
-    /// Function
+    /// Function for your order information.
     func configure(cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         let menuItem = menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
         cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
+        MenuController.shared.fetchImage(url: menuItem.imageURL) { (image) in
+            guard let image = image else { return }
+            DispatchQueue.main.async {
+                if let currentIndexPath = self.tableView.indexPath(for: cell),
+                    currentIndexPath != indexPath {
+                    return
+                }
+                cell.imageView?.image = image
+            }
+        }
     }
     
-    /// Function
+    /// Function for adding menu item to your order.
     func added(menuItem: MenuItem) {
         menuItems.append(menuItem)
         let count = menuItems.count
@@ -91,7 +102,7 @@ class OrderTableViewController: UITableViewController, AddToOrderDelegate {
         }
     }
     
- 
+    /// Function for if the submit order button is tapped.
     @IBAction func submitTapped(_ sender: Any) {
         let orderTotal = menuItems.reduce(0.0) { (result, menuItem) -> Double in
             return result + menuItem.price
@@ -107,7 +118,7 @@ class OrderTableViewController: UITableViewController, AddToOrderDelegate {
             present(alert, animated: true, completion: nil)
     }
     
-    
+    /// Function that uploads the orders.
     func uploadOrder() {
         let menuIds = menuItems.map { $0.id }
         MenuController.shared.submitOrder(menuIds: menuIds)
@@ -121,6 +132,7 @@ class OrderTableViewController: UITableViewController, AddToOrderDelegate {
         }
     }
     
+    /// Function to prepare for confirmationscreen.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ConfirmationSegue" {
             let orderConfirmationViewController = segue.destination as! OrderConfirmationViewController
@@ -128,13 +140,15 @@ class OrderTableViewController: UITableViewController, AddToOrderDelegate {
         }
     }
     
+    /// Function that takes the correct image size.
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-            
-            
-            
 }
+            
+            
+            
+
   
 
   

@@ -94,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				B2A469D820A0511600CB65E4 /* Restaurant */,
-				B2A469ED20A0511A00CB65E4 /* RestaurantTests */,
 				B2A469F820A0511A00CB65E4 /* RestaurantUITests */,
 				B2A469D720A0511600CB65E4 /* Products */,
 			);
@@ -126,6 +125,7 @@
 				B2A46A0B20A05BA900CB65E4 /* OrderTableViewController.swift */,
 				B2A469E020A0511900CB65E4 /* Assets.xcassets */,
 				B2A469E220A0511900CB65E4 /* LaunchScreen.storyboard */,
+				B2A469ED20A0511A00CB65E4 /* RestaurantTests */,
 				B2A469E520A0511900CB65E4 /* Info.plist */,
 			);
 			path = Restaurant;

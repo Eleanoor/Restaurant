@@ -18,7 +18,7 @@ class MenuTableViewController: UITableViewController {
     
     // MARK: - Functions
     
-    ///
+    /// Function that updates the screen.
     override func viewDidLoad() {
         super.viewDidLoad()
         title = category.capitalized
@@ -30,7 +30,7 @@ class MenuTableViewController: UITableViewController {
         }
     }
     
-    ///
+    /// Function that updates the screen.
     func updateUI(with menuItems: [MenuItem]) {
         DispatchQueue.main.async {
         self.menuItems = menuItems
@@ -38,25 +38,25 @@ class MenuTableViewController: UITableViewController {
         }
     }
 
-    ///
+    /// Function for memory.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    ///
+    /// Function that updates the tableview.
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
     }
 
-    ///
+    /// Function that updates the tableview.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCellIdentifier", for: indexPath)
         configure(cell: cell, forItemAt: indexPath)
         return cell
     }
 
-    ///
+    /// Function that updates the information about the menu.
     func configure(cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         let menuItem = menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
@@ -73,7 +73,7 @@ class MenuTableViewController: UITableViewController {
         }
     }
     
-    ///
+    /// Function that connects with the Menu Detail page.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MenuDetailSegue" {
             let menuItemDetailViewController = segue.destination as! MenuItemDetailViewController
@@ -82,6 +82,7 @@ class MenuTableViewController: UITableViewController {
         }
     }
     
+    /// Function for the size of the images.
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
