@@ -23,7 +23,7 @@ class MenuController {
             
             if let data = data,
                 let jsonDictionary = try?
-                JSONSerialization.jsonObject(with: data) as? [String:Any],
+JSONSerialization.jsonObject(with: data) as? [String:Any],
             let categories = jsonDictionary?["categories"] as? [String] {
                 completion(categories)
             } else {

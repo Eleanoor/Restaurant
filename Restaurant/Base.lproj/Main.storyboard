@@ -176,7 +176,6 @@
         <!--Your Order-->
         <scene sceneID="BqX-uL-C2H">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GF4-p8-wxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="9ZO-rn-5pD" customClass="OrderTableViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jUR-zl-GRE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -221,6 +220,7 @@
                         <segue destination="FDO-G9-uY2" kind="presentation" identifier="ConfirmationSegue" id="Uyo-Kn-qLS"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GF4-p8-wxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="792.79999999999995" y="937.78110944527748"/>
         </scene>
@@ -232,8 +232,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eof-PB-f7c">
-                                <rect key="frame" x="24" y="323" width="327" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eof-PB-f7c">
+                                <rect key="frame" x="24" y="323.5" width="327" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

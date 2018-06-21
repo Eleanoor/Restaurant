@@ -30,6 +30,11 @@ class MenuItemDetailViewController: UIViewController {
         updateUI()
         setupDelegate()
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
     /// Function
     func updateUI() {
@@ -43,6 +48,7 @@ class MenuItemDetailViewController: UIViewController {
                 self.imageView.image = image
             }
         }
+     
     }
     
    
@@ -55,12 +61,7 @@ class MenuItemDetailViewController: UIViewController {
         }
     }
     
-    /// Function
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     /// Function
     @IBAction func addToOderButtonTapped(_ sender: UIButton) {
         UIView.animate(withDuration: 0.3) {
@@ -71,6 +72,7 @@ class MenuItemDetailViewController: UIViewController {
         }
         delegate?.added(menuItem: menuItem)
     }
+    
     
 
 
